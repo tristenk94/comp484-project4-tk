@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GEOGUESSR: CSUN EDITION</title>  
+  
+    <link href="style.css" rel="stylesheet" type="text/css">  
+    <link rel="icon" href="https://cdn.glitch.com/8abdafe9-cae9-4126-a70b-ae310ffa2e6b%2Ffavicon.png?v=1606606102408"/> <!--site icon-->
+
+
+  </head>
+  <body>
+    <h1>Geoguessr: CSUN Edition</h1>
+    <div class="redBar">
+      <p>How well do you know CSUN? Pick 5 locations with this quiz!</p>
+    </div> <!-- blank red bar for spacing and aesthetics -->
+    
+    <section> <!-- test area -->
+
+    <div class="gameBox">
+       <p id="attempts-holder">You have <a id="attemptsLeft">NaN</a> location(s) to go!</p>
+      
+       <p id="question-start">Where is <a id="randomQ">2222</a>?</p>
+      <span id="output"></span>
+      <h3 id="score-holder">Your Score: <a id="score">NaN</a></h3>
+    </div>
+   </section>
+   
+    
+    <section> <!-- map section -->
+      <!--The div element for the map -->
+      <div id="map" class="map"></div>
+    </section>
+    
+   <section>  
+     <div class="gameBoxTwo">
+         <span id="start-text"><strong>Click here to get started!</strong></span>
+     <button id="reset">Start over</button> <!-- start over button that has an even listener to start over -->   
+         <div id="timer" class="timer">00:00:00</div>
+     </div>
+    </section>
+        
+  </body>
+  <footer>disclaimer: not officially endorsed by geoguessr</footer>  
+   
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script aysnc defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVFtorMRoFi5QBwmCsJHKZ7aVuI0az9zI&map_ids=500a150e12fd04d6&callback=initMap&libraries=&v=weekly"></script>
+  <script src="buildingData.js"></script>
+  <script src="script.js"></script>
+   
+</html>
